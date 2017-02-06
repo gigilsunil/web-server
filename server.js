@@ -5,7 +5,8 @@ var app = express();
 	res.send('Hello Express');
 });*/
 
-var middleware ={
+var middleware = require('./middleware.js');
+/*{
 	requireAuthentication : function(req, res, next){
 		console.log('Private route hit');
 		next();
@@ -14,7 +15,7 @@ var middleware ={
 		console.log(req.method + ' '+req.originalUrl);
 		next();
 	}
-};
+};*/
 app.use(middleware.logger);
 //app.use(middleware.requireAuthentication);
 
